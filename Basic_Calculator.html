@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="author">
+        <title>Coding once again!</title>
+        <link rel="stylesheet" href="main.css">
+        <style>
+            .container{
+                height: 200px;
+                width: 200px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type="number" name="first" id="first">
+            <select id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+            <input type="number" name="second" id="second">
+            <button onclick="myFunc()">=</button>
+        </div>
+        <h1 style="text-align: center;" id="res"></h1>
+    </body>
+
+    <script type="text/javascript">
+        function myFunc(){
+            var first = document.getElementById("first").value;
+            var second = document.getElementById("second").value;
+            var operation = document.getElementById("operation").value;
+            document.getElementById("res").innerHTML = eval(first+operation+second);
+        }
+    </script>
+</html>
